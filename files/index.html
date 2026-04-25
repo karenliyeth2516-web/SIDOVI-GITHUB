@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIDOVI – Sistema de Documentación y Vinculación</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="logo_sidovi.png" alt="Logo SIDOVI – Sistema de Información para la Dcumentación y Vinculación de Personal" class="brand-logo" width="400"/>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+          <li><a href="postulacion.html" class="nav-link">Postularse</a></li>
+          <li><a href="login.html" class="nav-link nav-cta">Acceso Personal</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-lines" aria-hidden="true"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">Colviseg Ltda. · Seguridad Privada</span>
+        <h1 id="hero-title">SID<span class="accent">OVI</span></h1>
+        <p class="hero-desc">SIDOVI (sistema de información para la documentación y vinculación de personal) automatiza y centraliza cada etapa del reclutamiento, selección y contratación de personal operativo y administrativo con trazabilidad total.</p>
+        <div class="hero-actions">
+          
+        </div>
+      </div>
+      <div class="hero-shield" aria-hidden="true">
+       <img src="Logo SIDOVI con cámara de seguridad.png" alt="Escudo Colviseg" width="600" />
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">¿Qué es <span class="accent">SIDOVI</span>?</h2>
+        <p>SIDOVI <em>(Sistema de Informacion para la Documentacion y Vinculacion de Personal )</em> es una plataforma desarrollada para gestionar de manera integral los procesos de reclutamiento, selección y contratación de personal en empresas de seguridad como <strong>Colviseg Ltda.</strong></p>
+        <p>Nace como solución tecnológica para optimizar procesos, garantizando control, trazabilidad y seguridad de la información en cada paso.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="logo_sidovi.png" alt="SIDOVI logo" class="footer-logo" />
+      <p>&copy; 2026 SIDOVI · Colviseg Ltda. · Todos los derechos reservados.</p>
+      <nav aria-label="Navegación del pie de página">
+        <ul class="footer-nav">
+
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const navList = document.querySelector('.nav-list');
+    toggle.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

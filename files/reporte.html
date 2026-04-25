@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reporte de Entrevista – SIDOVI</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand"><img src="logo_sidovi.png" alt="Logo SIDOVI" class="brand-logo" /></div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="RRHH.html" class="nav-link">Dashboard</a></li>
+          <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+          <li><a href="reporte.html" class="nav-link active" aria-current="page">Reportes</a></li>
+          <li><a href="login.html" class="nav-link nav-cta">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <div class="panel-layout">
+    <aside class="sidebar" aria-label="Menú del panel">
+      <span class="sidebar-title">Gestión</span>
+      <a href="RRHH.html" class="sidebar-link"><span class="icon">📋</span> Dashboard</a>
+      <a href="postulantes.html" class="sidebar-link"><span class="icon">👥</span> Postulantes</a>
+      <a href="hojasdevida.html" class="sidebar-link"><span class="icon">📄</span> Hojas de Vida</a>
+      <a href="agenda.html" class="sidebar-link"><span class="icon">📅</span> Agenda</a>
+      <a href="reporte.html" class="sidebar-link active" aria-current="page"><span class="icon">📊</span> Reportes</a>
+      <span class="sidebar-title" style="margin-top:1rem;">Accesos</span>
+      <a href="gerente.html" class="sidebar-link"><span class="icon">🏢</span> Gerencia</a>
+      <a href="trabajadores.html" class="sidebar-link"><span class="icon">👷</span> Trabajadores</a>
+    </aside>
+
+    <main class="panel-content" aria-labelledby="reporte-title">
+      <div class="panel-header">
+        <h1 id="reporte-title">Reporte de Entrevista</h1>
+        <p>Registra el resultado de la entrevista para enviar a Gerencia.</p>
+      </div>
+
+      <div style="background:var(--blanco);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem;border:1px solid var(--border);box-shadow:var(--shadow-card);">
+        <h2 style="font-size:1.1rem;color:var(--azul-oscuro);margin-bottom:1rem;font-family:var(--font-display);">Candidato Evaluado</h2>
+        <div class="form-row">
+          <div class="field">
+            <label for="rp-candidato">Aspirante</label>
+            <select id="rp-candidato">
+              <option>María López Ruiz</option>
+              <option>Diana Herrera Mora</option>
+              <option>Ana Martínez Cruz</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="rp-fecha">Fecha de Entrevista</label>
+            <input type="date" id="rp-fecha" value="2025-04-08" />
+          </div>
+        </div>
+      </div>
+
+      <div class="eval-layout">
+        <!-- CRITERIOS -->
+        <div class="eval-card" aria-labelledby="crit-title">
+          <div class="eval-card-header"><h2 id="crit-title">Criterios de Evaluación</h2></div>
+          <div class="eval-card-body">
+            <div class="criteria-list" id="criteriaList">
+              <div class="criterion">
+                <label>Presentación Personal</label>
+                <div class="stars" data-criterion="presentacion" role="radiogroup" aria-label="Puntaje Presentación Personal">
+                  <span class="star" data-val="1" role="radio" aria-label="1 estrella" tabindex="0">★</span>
+                  <span class="star" data-val="2" role="radio" aria-label="2 estrellas" tabindex="0">★</span>
+                  <span class="star" data-val="3" role="radio" aria-label="3 estrellas" tabindex="0">★</span>
+                  <span class="star" data-val="4" role="radio" aria-label="4 estrellas" tabindex="0">★</span>
+                  <span class="star" data-val="5" role="radio" aria-label="5 estrellas" tabindex="0">★</span>
+                </div>
+              </div>
+              <div class="criterion">
+                <label>Conocimiento del Área</label>
+                <div class="stars" data-criterion="conocimiento" role="radiogroup" aria-label="Puntaje Conocimiento">
+                  <span class="star" data-val="1" role="radio" aria-label="1 estrella" tabindex="0">★</span><span class="star" data-val="2" role="radio" aria-label="2 estrellas" tabindex="0">★</span><span class="star" data-val="3" role="radio" aria-label="3 estrellas" tabindex="0">★</span><span class="star" data-val="4" role="radio" aria-label="4 estrellas" tabindex="0">★</span><span class="star" data-val="5" role="radio" aria-label="5 estrellas" tabindex="0">★</span>
+                </div>
+              </div>
+              <div class="criterion">
+                <label>Habilidades de Comunicación</label>
+                <div class="stars" data-criterion="comunicacion" role="radiogroup" aria-label="Puntaje Comunicación">
+                  <span class="star" data-val="1" tabindex="0">★</span><span class="star" data-val="2" tabindex="0">★</span><span class="star" data-val="3" tabindex="0">★</span><span class="star" data-val="4" tabindex="0">★</span><span class="star" data-val="5" tabindex="0">★</span>
+                </div>
+              </div>
+              <div class="criterion">
+                <label>Experiencia Verificada</label>
+                <div class="stars" data-criterion="experiencia" role="radiogroup" aria-label="Puntaje Experiencia">
+                  <span class="star" data-val="1" tabindex="0">★</span><span class="star" data-val="2" tabindex="0">★</span><span class="star" data-val="3" tabindex="0">★</span><span class="star" data-val="4" tabindex="0">★</span><span class="star" data-val="5" tabindex="0">★</span>
+                </div>
+              </div>
+              <div class="criterion">
+                <label>Aptitud para el Cargo</label>
+                <div class="stars" data-criterion="aptitud" role="radiogroup" aria-label="Puntaje Aptitud">
+                  <span class="star" data-val="1" tabindex="0">★</span><span class="star" data-val="2" tabindex="0">★</span><span class="star" data-val="3" tabindex="0">★</span><span class="star" data-val="4" tabindex="0">★</span><span class="star" data-val="5" tabindex="0">★</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="score-summary" aria-live="polite">
+              <div class="score-big" id="scoreDisplay">0.0</div>
+              <div class="score-label">Puntaje Promedio / 5.0</div>
+            </div>
+
+            <div class="field" style="margin-top:1.25rem;">
+              <label for="rp-obs">Observaciones del Entrevistador</label>
+              <textarea id="rp-obs" rows="4" placeholder="Escribe tus observaciones sobre el candidato..."></textarea>
+            </div>
+
+            <div class="field" style="margin-top:1rem;">
+              <label for="rp-recomendacion">Recomendación</label>
+              <select id="rp-recomendacion">
+                <option value="" disabled selected>Seleccionar recomendación</option>
+                <option value="aprobar">✅ Aprobar para siguiente fase</option>
+                <option value="espera">⏳ En lista de espera</option>
+                <option value="rechazar">❌ No clasificó</option>
+              </select>
+            </div>
+
+            <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+              <button type="button" class="btn btn-primary" id="btnGuardarReporte">Guardar Reporte</button>
+              <a href="gerente.html" class="btn btn-outline" style="border-color:var(--azul-claro);color:var(--azul-claro);">Enviar a Gerencia</a>
+            </div>
+            <div id="rep-alert" class="form-alert" role="alert" aria-live="polite" hidden style="margin-top:1rem;"></div>
+          </div>
+        </div>
+
+        <!-- RESUMEN -->
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div class="eval-card" aria-labelledby="hist-title">
+            <div class="eval-card-header"><h2 id="hist-title">Reportes Recientes</h2></div>
+            <div style="padding:1rem;">
+              <div style="border-bottom:1px solid var(--border);padding:0.75rem 0;">
+                <strong style="font-size:0.9rem;color:var(--azul-oscuro);">Carlos Romero Silva</strong>
+                <div style="font-size:0.8rem;color:var(--gris-claro);">Supervisor · 07/04/2025 · ⭐ 4.6</div>
+                <span class="badge badge-aprobado" style="margin-top:0.25rem;">Aprobado</span>
+              </div>
+              <div style="border-bottom:1px solid var(--border);padding:0.75rem 0;">
+                <strong style="font-size:0.9rem;color:var(--azul-oscuro);">Luis Torres Vega</strong>
+                <div style="font-size:0.8rem;color:var(--gris-claro);">Guarda · 05/04/2025 · ⭐ 2.1</div>
+                <span class="badge badge-rechazado" style="margin-top:0.25rem;">No Clasificó</span>
+              </div>
+              <div style="padding:0.75rem 0;">
+                <strong style="font-size:0.9rem;color:var(--azul-oscuro);">Valentina Castro G.</strong>
+                <div style="font-size:0.8rem;color:var(--gris-claro);">Técnico CCTV · 02/04/2025 · ⭐ 4.8</div>
+                <span class="badge badge-aprobado" style="margin-top:0.25rem;">Aprobada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="logo_sidovi.png" alt="SIDOVI" class="footer-logo" />
+      <p>&copy; 2025 SIDOVI · Colviseg Ltda.</p>
+      <nav aria-label="Pie de página"><ul class="footer-nav"><li><a href="RRHH.html">Dashboard</a></li><li><a href="gerente.html">Gerencia</a></li></ul></nav>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('menuToggle').addEventListener('click',()=>document.querySelector('.nav-list').classList.toggle('open'));
+    const scores={};
+    document.querySelectorAll('.stars').forEach(group=>{
+      const crit=group.dataset.criterion;
+      scores[crit]=0;
+      group.querySelectorAll('.star').forEach(star=>{
+        star.addEventListener('click',()=>{
+          scores[crit]=parseInt(star.dataset.val);
+          group.querySelectorAll('.star').forEach(s=>s.classList.toggle('active',parseInt(s.dataset.val)<=scores[crit]));
+          updateScore();
+        });
+      });
+    });
+    function updateScore(){
+      const vals=Object.values(scores).filter(v=>v>0);
+      const avg=vals.length?vals.reduce((a,b)=>a+b,0)/vals.length:0;
+      document.getElementById('scoreDisplay').textContent=avg.toFixed(1);
+    }
+    document.getElementById('btnGuardarReporte').addEventListener('click',()=>{
+      const rec=document.getElementById('rp-recomendacion').value;
+      const al=document.getElementById('rep-alert');
+      if(!rec){al.textContent='⚠️ Selecciona una recomendación antes de guardar.';al.className='form-alert error';al.hidden=false;return;}
+      al.textContent='✅ Reporte guardado exitosamente. Disponible para revisión de Gerencia.';al.className='form-alert success';al.hidden=false;
+    });
+  </script>
+</body>
+</html>

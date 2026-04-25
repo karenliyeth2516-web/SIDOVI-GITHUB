@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Postulantes – SIDOVI</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand"><img src="logo_sidovi.png" alt="Logo SIDOVI" class="brand-logo" /></div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio Público</a></li>
+          <li><a href="RRHH.html" class="nav-link">Panel RRHH</a></li>
+          <li><a href="login.html" class="nav-link nav-cta">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <div class="panel-layout">
+    <aside class="sidebar" aria-label="Menú del panel">
+      <span class="sidebar-title">Gestión</span>
+      <a href="RRHH.html" class="sidebar-link"><span class="icon">📋</span> Dashboard</a>
+      <a href="postulantes.html" class="sidebar-link active" aria-current="page"><span class="icon">👥</span> Postulantes</a>
+      <a href="hojasdevida.html" class="sidebar-link"><span class="icon">📄</span> Hojas de Vida</a>
+      <a href="agenda.html" class="sidebar-link"><span class="icon">📅</span> Agenda</a>
+      <a href="reporte.html" class="sidebar-link"><span class="icon">📊</span> Reportes</a>
+      <span class="sidebar-title" style="margin-top:1rem;">Accesos</span>
+      <a href="gerente.html" class="sidebar-link"><span class="icon">🏢</span> Gerencia</a>
+      <a href="trabajadores.html" class="sidebar-link"><span class="icon">👷</span> Trabajadores</a>
+    </aside>
+
+    <main class="panel-content" aria-labelledby="post-title">
+      <div class="panel-header">
+        <h1 id="post-title">Gestión de Postulantes</h1>
+        <p>Consulta, filtra y gestiona todos los candidatos registrados en el sistema.</p>
+      </div>
+
+      <div class="filter-bar" role="search" aria-label="Filtrar postulantes">
+        <input type="text" id="buscar" placeholder="🔍 Buscar por nombre o cédula..." aria-label="Buscar postulante" />
+        <select id="filtroEstado" aria-label="Filtrar por estado">
+          <option value="">Todos los estados</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Entrevista">Entrevista</option>
+          <option value="Aprobado">Aprobado</option>
+          <option value="No Clasificó">No Clasificó</option>
+        </select>
+        <select id="filtroCargo" aria-label="Filtrar por cargo">
+          <option value="">Todos los cargos</option>
+          <option value="Guarda">Guarda de Seguridad</option>
+          <option value="Supervisor">Supervisor</option>
+          <option value="RRHH">Auxiliar RRHH</option>
+          <option value="CCTV">Técnico CCTV</option>
+        </select>
+      </div>
+
+      <div class="data-table-wrap">
+        <h2>Lista de Postulantes (24)</h2>
+        <table id="tablaPostulantes">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Cédula</th>
+              <th scope="col">Cargo Aspirado</th>
+              <th scope="col">Fecha Postulación</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="postulante-row"><td>Juan Pérez García</td><td>1012345678</td><td>Guarda de Seguridad</td><td>09/04/2025</td><td><span class="badge badge-pendiente">Pendiente</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="agenda.html" class="btn-xs btn-xs-green">Agendar</a></td></tr>
+            <tr class="postulante-row"><td>María López Ruiz</td><td>1023456789</td><td>Auxiliar RRHH</td><td>08/04/2025</td><td><span class="badge badge-entrevista">Entrevista</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="reporte.html" class="btn-xs btn-xs-green">Evaluar</a></td></tr>
+            <tr class="postulante-row"><td>Carlos Romero Silva</td><td>1034567890</td><td>Supervisor Seguridad</td><td>07/04/2025</td><td><span class="badge badge-aprobado">Aprobado</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="contrato.html" class="btn-xs btn-xs-green">Contrato</a></td></tr>
+            <tr class="postulante-row"><td>Ana Martínez Cruz</td><td>1045678901</td><td>Técnico CCTV</td><td>06/04/2025</td><td><span class="badge badge-pendiente">Pendiente</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="agenda.html" class="btn-xs btn-xs-green">Agendar</a></td></tr>
+            <tr class="postulante-row"><td>Luis Torres Vega</td><td>1056789012</td><td>Guarda de Seguridad</td><td>05/04/2025</td><td><span class="badge badge-rechazado">No Clasificó</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a></td></tr>
+            <tr class="postulante-row"><td>Diana Herrera Mora</td><td>1067890123</td><td>Auxiliar RRHH</td><td>04/04/2025</td><td><span class="badge badge-entrevista">Entrevista</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="reporte.html" class="btn-xs btn-xs-green">Evaluar</a></td></tr>
+            <tr class="postulante-row"><td>Santiago Ríos Pardo</td><td>1078901234</td><td>Guarda de Seguridad</td><td>03/04/2025</td><td><span class="badge badge-pendiente">Pendiente</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="agenda.html" class="btn-xs btn-xs-green">Agendar</a></td></tr>
+            <tr class="postulante-row"><td>Valentina Castro Gómez</td><td>1089012345</td><td>Técnico CCTV</td><td>02/04/2025</td><td><span class="badge badge-aprobado">Aprobado</span></td><td style="display:flex;gap:0.4rem;flex-wrap:wrap;"><a href="hdv.html" class="btn-xs btn-xs-blue">HDV</a><a href="contrato.html" class="btn-xs btn-xs-green">Contrato</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="logo_sidovi.png" alt="SIDOVI" class="footer-logo" />
+      <p>&copy; 2025 SIDOVI · Colviseg Ltda.</p>
+      <nav aria-label="Pie de página"><ul class="footer-nav"><li><a href="index.html">Inicio</a></li><li><a href="RRHH.html">Dashboard</a></li></ul></nav>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('menuToggle').addEventListener('click',()=>document.querySelector('.nav-list').classList.toggle('open'));
+    document.getElementById('buscar').addEventListener('input', filtrar);
+    document.getElementById('filtroEstado').addEventListener('change', filtrar);
+    function filtrar(){
+      const q=document.getElementById('buscar').value.toLowerCase();
+      const est=document.getElementById('filtroEstado').value.toLowerCase();
+      document.querySelectorAll('#tablaPostulantes tbody tr').forEach(tr=>{
+        const txt=tr.textContent.toLowerCase();
+        tr.style.display=(txt.includes(q)&&(est===''||txt.includes(est)))?'':'none';
+      });
+    }
+  </script>
+</body>
+</html>

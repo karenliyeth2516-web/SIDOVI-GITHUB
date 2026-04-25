@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contrato Laboral – SIDOVI</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand"><img src="logo_sidovi.png" alt="Logo SIDOVI" class="brand-logo" /></div>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="gerente.html" class="nav-link">Gerencia</a></li>
+          <li><a href="evaluar.html" class="nav-link">Evaluaciones</a></li>
+          <li><a href="contrato.html" class="nav-link active" aria-current="page">Contratos</a></li>
+          <li><a href="login.html" class="nav-link nav-cta">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <main style="padding:2.5rem 1.5rem;background:var(--gris-bg);min-height:calc(100vh - 150px);" aria-labelledby="contrato-title">
+    <div class="container">
+      <h1 id="contrato-title" style="color:var(--azul-oscuro);margin-bottom:0.5rem;">Generación de Contrato Laboral</h1>
+      <p style="color:var(--gris-claro);margin-bottom:2rem;">Vista previa del contrato antes de su firma oficial.</p>
+
+      <div class="contrato-doc" aria-label="Documento de contrato laboral">
+        <div class="contrato-header">
+          <img src="logo_colviseg.png" alt="Logo Colviseg" style="height:60px;margin:0 auto 1rem;" />
+          <h2>Contrato de Trabajo a Término Fijo</h2>
+          <p>Colviseg Ltda. · NIT: 900.123.456-7 · Bogotá D.C., Colombia</p>
+          <p style="margin-top:0.25rem;font-size:0.82rem;color:var(--gris-claro);">Contrato N.° <strong>COL-2025-0041</strong> · Fecha: 10 de Abril de 2025</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Primera – Partes del Contrato</h3>
+          <p>Entre <strong>Colviseg Ltda.</strong>, identificada con NIT 900.123.456-7, representada legalmente por su Gerente General, en adelante EL EMPLEADOR; y <strong>Carlos Romero Silva</strong>, identificado con cédula de ciudadanía N.° 1.034.567.890 de Bogotá, en adelante EL TRABAJADOR.</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Segunda – Objeto del Contrato</h3>
+          <p>EL TRABAJADOR se obliga a prestar sus servicios personales al EMPLEADOR en el cargo de <strong>Supervisor de Seguridad</strong>, desempeñando las funciones inherentes a dicho cargo y las demás que le sean asignadas por la empresa.</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Tercera – Duración</h3>
+          <p>El presente contrato tendrá una duración de <strong>un (1) año</strong>, contado a partir del <strong>15 de Abril de 2025</strong>. Al vencimiento del término pactado, el contrato se prorrogará automáticamente si subsisten las causas que le dieron origen.</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Cuarta – Salario</h3>
+          <p>EL EMPLEADOR pagará al TRABAJADOR un salario mensual de <strong>$1.423.500 COP</strong> (Un millón cuatrocientos veintitrés mil quinientos pesos), pagadero quincenalmente. Este salario incluye las prestaciones sociales de ley.</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Quinta – Jornada Laboral</h3>
+          <p>La jornada de trabajo será de <strong>48 horas semanales</strong> distribuidas en turnos rotativos, de conformidad con las necesidades del servicio y la normativa colombiana vigente (Código Sustantivo del Trabajo).</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Sexta – Lugar de Trabajo</h3>
+          <p>El TRABAJADOR prestará sus servicios principalmente en <strong>Bogotá D.C.</strong>, sin perjuicio de que el EMPLEADOR pueda asignarlo temporalmente en otras ciudades del país cuando las necesidades del servicio lo requieran.</p>
+        </div>
+
+        <div class="contrato-clause">
+          <h3>Cláusula Séptima – Obligaciones del Trabajador</h3>
+          <p>El TRABAJADOR se obliga a cumplir con diligencia y cuidado las órdenes e instrucciones del EMPLEADOR, guardar absoluta reserva sobre la información confidencial de la empresa, mantener vigente el curso de vigilancia y actuar en todo momento con ética profesional.</p>
+        </div>
+
+        <div class="contrato-firmas">
+          <div class="firma-box">
+            <div class="firma-line"></div>
+            <strong>Colviseg Ltda.</strong>
+            <p>Representante Legal · NIT: 900.123.456-7</p>
+          </div>
+          <div class="firma-box">
+            <div class="firma-line"></div>
+            <strong>Carlos Romero Silva</strong>
+            <p>C.C. 1.034.567.890 · El Trabajador</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contrato-actions">
+        <button type="button" class="btn btn-outline" onclick="window.print()">🖨️ Imprimir</button>
+        <a href="trabajadores.html" class="btn btn-primary" id="btnFirmar">✅ Firmar y Registrar Trabajador</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="logo_sidovi.png" alt="SIDOVI" class="footer-logo" />
+      <p>&copy; 2025 SIDOVI · Colviseg Ltda.</p>
+      <nav aria-label="Pie de página"><ul class="footer-nav"><li><a href="gerente.html">Gerencia</a></li><li><a href="trabajadores.html">Trabajadores</a></li></ul></nav>
+    </div>
+  </footer>
+  <script>document.getElementById('menuToggle').addEventListener('click',()=>document.querySelector('.nav-list').classList.toggle('open'));</script>
+</body>
+</html>
